@@ -4,7 +4,7 @@ import './Card.css';
 const Card = (props) => (
   <div className= "card-container">
     <div className = "card">
-      <div className = "font">
+      <div className = "front">
         <div className = "term">{props.term}</div>
 
       </div>

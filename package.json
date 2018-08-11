@@ -4,11 +4,14 @@
   "private": true,
   "homepage": "https://papaniivanderpuye.github.io/myEidy",
   "dependencies": {
+    "@material-ui/core": "^1.4.3",
     "firebase": "^5.3.1",
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "underscore": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
