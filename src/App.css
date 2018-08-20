@@ -2,7 +2,11 @@
   /*
   background-image: url(images/overlay.png), url(images/pattern-size1.svg);
   background-color: #4696e5;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
   */
 
   text-align: center;
@@ -29,7 +33,11 @@
 }
 
 .reference{
+<<<<<<< HEAD
   font-size: 0.7em;
+=======
+  font-size: 0.5em;
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
   position:absolute;
   top:0;
   right:0;
@@ -71,7 +79,11 @@
 }
 @keyframes slideIn {
     from {
+<<<<<<< HEAD
     transform: translate(50px,0px);
+=======
+    transform: translate(50px,0px); 
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 		opacity: 0;
   }
   to {
@@ -82,7 +94,11 @@
 
 @keyframes slideIn2 {
     from {
+<<<<<<< HEAD
     transform: translate(50px,0px);
+=======
+    transform: translate(50px,0px); 
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 		opacity: 0;
   }
   to {
@@ -93,7 +109,11 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+@import url(font-awesome.min.css);
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 
 /*
 	Fractal by HTML5 UP
@@ -1927,7 +1947,11 @@ input, select, textarea {
 		}
 
 /* Button */
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -1958,7 +1982,11 @@ input, select, textarea {
 		white-space: wrap;
 	}
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 
 		input[type="submit"].icon,
 		input[type="reset"].icon,
@@ -2072,7 +2100,11 @@ input, select, textarea {
 			box-shadow: none;
 			background-color: #4696e5;
 			color: #ffffff !important;
+<<<<<<< HEAD
 		}
+=======
+		} 
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 
 			input[type="submit"].primary:hover,
 			input[type="reset"].primary:hover,
@@ -2089,7 +2121,11 @@ input, select, textarea {
 			.button.primary:active {
 				background-color: #3089e2;
 			}
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 
 /* Form */
 
@@ -2124,7 +2160,11 @@ input, select, textarea {
 		text-decoration: none;
 		width: 100%;
 		margin:center;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 	}
 
 		input[type="text"]:invalid,
@@ -2921,7 +2961,11 @@ input, select, textarea {
 		padding: 2px;
 		background-color: #ffffff;
 		vertical-align:center;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 }
 
 #customers table{
@@ -2939,11 +2983,19 @@ input, select, textarea {
 
 
 #customers td, #customers th {
+<<<<<<< HEAD
 
     border: 1px solid #ddd;
     padding: 8px;
 
 
+=======
+	  
+    border: 1px solid #ddd;
+    padding: 8px;
+		
+		
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 }
 
 
@@ -2958,8 +3010,13 @@ input, select, textarea {
     text-align: center;
     background-color: #3DDC97;
     color: white;
+<<<<<<< HEAD
 
 
+=======
+		
+		
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 }
 
 
@@ -3729,15 +3786,25 @@ input, select, textarea {
 			#header input[type="button"].navigation,
 			#header button.navigation,
 			#header .button.navigation {
+<<<<<<< HEAD
 
 				background-color: #3DDC97;
+=======
+				
+				background-color: #3DDC97; 
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 				color: #ffffff!important;
         /*
         box-shadow: 0 0 0 0.50px #ffffff;
         #5D2E8C; /*3B3561;
         */
+<<<<<<< HEAD
 
 
+=======
+  
+        
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 			}
 
       .navigation{
@@ -3756,7 +3823,11 @@ input, select, textarea {
 			color: inherit;
 			background-color: rgba(255, 255, 255, 0.075);
 			border-color: rgba(255, 255, 255, 0.25);
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 		}
 
 			#header input[type="text"]:focus,
@@ -3849,7 +3920,11 @@ input, select, textarea {
 		}
 
 			#header table tbody tr:nth-child(2n + 1) {
+<<<<<<< HEAD
 				/*background-color: rgba(255, 255, 255, 0.075);*/ 
+=======
+				background-color: rgba(255, 255, 255, 0.075);
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 			}
 
 		#header table th {
@@ -4221,4 +4296,8 @@ input, select, textarea {
 			padding: 3em 1.5em 1em 1.5em ;
 		}
 
+<<<<<<< HEAD
 	}
+=======
+	}
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca

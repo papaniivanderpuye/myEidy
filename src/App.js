@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
+=======
+import { render, findDOMNode } from "react-dom";
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 import "./App.css";
 import _ from "underscore";
 //import { Alert, Panel, FormControl } from "react-bootstrap";
@@ -35,8 +39,12 @@ class App extends Component {
       setSizeFeedback: " ",
       tableName: "Default Set",
       addlayoutClass:"layout",
+<<<<<<< HEAD
       studylayoutClass: "layout1",
       definitionShow: ""
+=======
+      studylayoutClass: "layout1"
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
     };
     this.dict = [
       {
@@ -88,7 +96,11 @@ class App extends Component {
     return a;
   }
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 
   componentWillMount() {
     const currentCards = this.state.cards;
@@ -114,7 +126,10 @@ class App extends Component {
     var myAlert = "warning";
 
     this.setState(prevState => ({
+<<<<<<< HEAD
       definitionShow: "",
+=======
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
       buttonClassList: this.repeat(["button"], 5),
       currentCard: this.getRandomCard(currentCards),
       randomAnswers: this.slots,
@@ -149,12 +164,15 @@ class App extends Component {
       checked = "Correct!";
       myAlert = "success";
     }
+<<<<<<< HEAD
     else{
       var correctAns=this.state.currentCard.definition;
       this.setState(prevState => ({
         definitionShow: ("Answer: "+ correctAns)
       }));
     }
+=======
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
     this.setState(prevState => ({
       responseToAnswer: checked,
       alert: myAlert
@@ -200,6 +218,7 @@ class App extends Component {
     }
     return card;
   }
+<<<<<<< HEAD
 
   switchPage() {
     if (this.state.FlashCardAdd) {
@@ -221,6 +240,29 @@ class App extends Component {
             FlashCardAdd: false,
 
 
+=======
+
+  switchPage() {
+    if (this.state.FlashCardAdd) {
+      if (this.userDict.length > 4) {
+        var myList = this.userDict;
+        this.setState({ cards: myList, }, () => {
+          
+          this.updateCard();
+           
+          this.setState(prevState =>({ 
+            
+            FlashCardAdd: false, }));
+        });
+      } else {
+        this.setState({ cards: this.dict }, () => {
+          this.updateCard();
+          console.log(this.state.studylayoutClass);
+          this.setState(prevState =>({
+            FlashCardAdd: false,
+          
+            
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
           }));
         });
       }
@@ -230,6 +272,7 @@ class App extends Component {
         setSizeFeedback: " ",
         FlashCardAdd: true,
       }));
+<<<<<<< HEAD
     }
   }
 
@@ -336,6 +379,114 @@ class App extends Component {
     children.push(<th>{"Definition"}</th>);
     table.push(<tr>{children}</tr>);
 
+=======
+    }
+  }
+
+  renderButtonList(myHandler, colorList) {
+    return (
+      <div>
+        {this.state.randomAnswers.map(function(name, index) {
+          return (
+            <AnswerButton
+              className={colorList[index]}
+              color={colorList[index]}
+              key={index}
+              index={index}
+              potentialAnswer={name}
+              check={myHandler}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
+  updateInputValueTerm(evt) {
+    this.setState({
+      inputValueTerm: evt.target.value
+    });
+  }
+
+  handleKeyDown(event) {
+    if (event.keyCode === 9) {
+      // tab was pressed
+      event.preventDefault();
+      var val = this.state.inputValueTerm,
+        start = event.target.selectionStart,
+        end = event.target.selectionEnd;
+      this.setState({
+        inputValueTerm: val.substring(0, start) + "\t" + val.substring(end)
+      });
+    }
+  }
+
+  addToFlashCards() {
+    var rawText = this.state.inputValueTerm;
+    if (rawText.length < 1) {
+      this.setState({
+        interactionFeedback: "No terms to add"
+      });
+      return;
+    }
+
+    var listOfTerms = rawText.split("\n");
+
+    var i;
+    for (i = 0; i < listOfTerms.length; i++) {
+      var flashcard = listOfTerms[i];
+      if (flashcard === "") {
+        continue;
+      }
+      var cardTuple = flashcard.split("\t");
+
+      if (cardTuple.length !== 2) {
+        continue;
+      }
+      this.userDict.push({
+        term: cardTuple[0],
+        definition: cardTuple[1]
+      });
+    }
+
+    var response = this.checkSetSize(this.userDict.length);
+    this.setState({
+      cards: this.userDict,
+      inputValueTerm: "",
+      inputValueDef: "",
+      interactionFeedback: "Terms have been Added to Set!",
+      tableName: "Your Set",
+      setSizeFeedback: response
+    });
+  }
+  checkSetSize(setlength) {
+    var termsNeeded = 5 - setlength;
+    if (termsNeeded > 0) {
+      return "You need " + termsNeeded.toString() + " more to use your own set";
+    }
+    return "You have enough to Study your set!";
+  }
+  deleteCards() {
+    if (this.userDict.length > 0) {
+      this.userDict.length = 0;
+    }
+    this.setState({
+      tableName: "Default Set",
+      cards: this.userDict,
+      interactionFeedback: "Set has been deleted.",
+      setSizeFeedback: " "
+    });
+  }
+
+  createTable(myCards) {
+    let table = [];
+
+    let children = [];
+    children.push(<th>{"Term"}</th>);
+    children.push(<th>{"Definition"}</th>);
+    table.push(<tr>{children}</tr>);
+
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
     for (let i = 0; i < myCards.length; i++) {
       let children = [];
       children.push(<td>{myCards[i].term}</td>);
@@ -402,6 +553,7 @@ class App extends Component {
       </div>
     );
   }
+<<<<<<< HEAD
 
   renderMainPage() {
     return (
@@ -443,4 +595,45 @@ class App extends Component {
   }
 }
 
+=======
+
+  renderMainPage() {
+    return (
+      <div className="content">
+        <div className="layout1">
+          <h1> {this.state.responseToAnswer} </h1>
+          <p>{this.state.currentCard.term}</p>
+
+          <div className="bRow">
+            {this.renderButtonList(
+              this.checkAnswer,
+              this.state.buttonClassList
+            )}
+          </div>
+          <div className="buttonRow">
+            <DrawButton className="button primary" drawCard={this.updateCard} />
+          </div>
+          <br />
+
+          <div className="switchButton">
+            <button className="button navigation " onClick={this.switchPage}>
+              Add More Questions
+            </button>
+          </div>
+        </div>
+   
+      </div>
+    );
+  }
+
+  render() {
+    if (this.state.FlashCardAdd) {
+      return <div className="App">{this.renderFlashCardAdd()}</div>;
+    } else {
+      return <div className="App">{this.renderMainPage()}</div>;
+    }
+  }
+}
+
+>>>>>>> 81dc3646517dd23a75773a31f71bb7ecf63c18ca
 export default App;
