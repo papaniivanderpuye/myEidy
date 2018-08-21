@@ -360,7 +360,6 @@ class App extends Component {
             Your set size must be at least five to user your own set.
           </p>
           <strong>{this.state.interactionFeedback}</strong>
-          <br />
           <strong>{this.state.setSizeFeedback}</strong>
           <textarea
             className="textInput"
@@ -378,13 +377,11 @@ class App extends Component {
               Add to Set
             </button>
           </div>
-          <br />
           <div className="addButton">
             <button onClick={this.deleteCards} className="button primary">
               Delete Set
             </button>
           </div>
-          <br />
           <div className="switchButton">
             <button className="button navigation" onClick={this.switchPage}>
               Study Questions
@@ -410,19 +407,16 @@ class App extends Component {
           <h1> {this.state.responseToAnswer} </h1>
           <p>{this.state.currentCard.term}</p>
           <strong>{this.state.definitionShow}</strong>
-          <br/>
-          <br/>
           <div className="bRow">
             {this.renderButtonList(
               this.checkAnswer,
               this.state.buttonClassList
             )}
           </div>
+          <br/>
           <div className="buttonRow">
             <DrawButton className="button primary" drawCard={this.updateCard} />
           </div>
-          <br />
-
           <div className="switchButton">
             <button className="button navigation " onClick={this.switchPage}>
               Add More Questions
